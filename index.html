@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .card-content {
+        padding: 20px;
+        text-align: left;
+      }
+
+      .card-content h2 {
+        margin: 0 0 10px;
+        color: #333;
+      }
+
+      .card-content p {
+        margin: 0 0 15px;
+        color: #666;
+      }
+
+      .button {
+        text-decoration: none;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      .button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Visor de Páginas Web</h1>
+      <div class="card">
+        <img src="/bananaMinimal/img/capture.png" alt="Página 1" />
+        <div class="card-content">
+          <h2>Página 1</h2>
+          <p>
+            Pagina simple para demostrar uso de CSS & HTML vanilla. :p
+          </p>
+          <a href="bananaMinimal/index.html" target="" class="button"
+            >Visitar Página</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
