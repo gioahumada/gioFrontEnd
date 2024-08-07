@@ -98,4 +98,20 @@ html {
     transform: scale(1.02) rotate(.5deg);
 }
 
+.past img {
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.past h3, .past p {
+    color: black;
+}
+
+.past:hover, .past:hover img {
+    filter: grayscale(0%);
+    text-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 1); /* Añadir borde al texto */
+}
+
+
+
 

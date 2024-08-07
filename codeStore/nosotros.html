@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="logotipo" srcset="">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace" href="index.html">Tienda</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Nosotros</h1>
+
+        <div class="flex">
+            <div class="nosotros">
+                <img class="nosotros__imagen" src="img/nosotros.jpg" alt="nosotros">
+                <div class="nosotros__informacion">
+                    <p class="nosotros__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, error perspiciatis! Animi, dolores nostrum! Illo sequi reprehenderit sit nostrum voluptatem, debitis et ab perferendis cupiditate esse tenetur quo sunt error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at sed, iusto ipsa hic tempore esse animi expedita reprehenderit similique ipsum deleniti corrupti quo officiis vitae possimus ullam minima sunt.</p>
+                </div>
+        </div>
+
+        <h3> ¿Porque comprar con nosotros?</h3>
+
+        <div class="whybuy">
+            <div class="caja">
+                <span class="material-symbols-outlined icon">shopping_cart</span>
+                <p class="caja__titulo">Compra segura</p>
+                <p class="caja__informacion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dignissimos eius, voluptatibus tempore possimus quidem praesentium distinctio.</p>
+            </div>
+
+            <div class="caja">
+                <span class="material-symbols-outlined icon">payments</span>
+                <p class="caja__titulo">Mejor precio</p>
+                <p class="caja__informacion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dignissimos eius, voluptatibus tempore possimus quidem praesentium distinctio.</p>
+            </div>
+
+            <div class="caja">
+                <span class="material-symbols-outlined icon">local_shipping</span>
+                <p class="caja__titulo">Envio Gratis</p>
+                <p class="caja__informacion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dignissimos eius, voluptatibus tempore possimus quidem praesentium distinctio.</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Giovanni Ahumada, todos los derechos reservados.</p>
+    </footer>
+
+    <iframe id="iframe" src="../back-button.html" style="position: fixed; bottom: 20px; left: 20px; width: 170px; height: 100px; border: none; z-index: 1000;"></iframe>
+
+    <script>
+        // Esperar a que el iframe cargue
+        document.getElementById('iframe').onload = function() {
+            // Obtener el documento dentro del iframe
+            var iframeDoc = document.getElementById('iframe').contentDocument || document.getElementById('iframe').contentWindow.document;
+            // Obtener el título del documento principal
+            var mainTitle = document.title;
+            // Colocar el título en el elemento con la clase 'backkk__page-title' dentro del iframe
+            var titleElement = iframeDoc.querySelector('.backkk__page-title');
+            if (titleElement) {
+                titleElement.textContent = mainTitle;
+            }
+        };
+    </script>
+    
+</body>
+</html>
