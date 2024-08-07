@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo del botón dentro del iframe */
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .back__btn {
+            background-color: #fb06066f;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .backkk__title a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .backkk__title p {
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin: 0;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .backkk__title p:hover {
+            transform: scale(1.1);
+        } 
+
+        .backkk__page-title p {
+            font-size: 1rem;
+            font-weight: 200;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .backkk__back {
+            font-size: .7rem;
+            margin-top: 10px;
+        }
+
+        .backkk__back a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .backkk__back a:hover {
+            text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="backkk">
+        <div class="backkk__title"><a href=""><p>:) gioFrontEnd</p></a></div>
+        <div class="backkk__page-title"><p>gioFrontEnd</p></div>
+        <div class="backkk__back"><a id="back-link" href="#">← Volver a los proyectos</a></div>
+    </div>
+
+    <script>
+        document.getElementById('back-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.history.back();
+        });
+    </script>
+</body>
+</html>

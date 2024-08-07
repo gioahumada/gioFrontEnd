@@ -1,0 +1,100 @@
+@import url(content/header.css);
+@import url(content/footer.css);
+@import url(content/var.css);
+
+/* all */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+    display: block;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    height: 100%;
+}
+
+
+
+.body {
+    padding: 0 35px;
+    margin-bottom: 20px;
+}
+
+.body span {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Tarjetas  */
+
+@media (min-width: 700px) {
+    .body {
+        padding: 0 200px;
+    }
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+
+.card {
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 10px;
+    position: relative; /* Añade esta línea para que los elementos hijos se posicionen relativamente a este contenedor */
+    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border-radius: 10px; /* Asegúrate de que el degradado siga el borde redondeado */
+    pointer-events: none; /* Permite que los eventos de ratón pasen a través del pseudo-elemento */
+}
+
+.card__img {
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+.card__text {
+    position: absolute; /* Posiciona absolutamente dentro del contenedor relativo */
+    bottom: 20px; /* Ajusta este valor para subir el texto */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centrar exactamente */
+    text-align: center; /* Centra el texto */
+    width: calc(100% - 40px); /* Asegúrate de que el texto ocupe todo el ancho del contenedor menos el padding */
+    padding: 0 20px; /* Añade padding para que el texto no toque los bordes */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    color: white;
+}
+
+.card__text h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.card__text p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.card:hover {
+    transform: scale(1.02) rotate(.5deg);
+}
+
+
